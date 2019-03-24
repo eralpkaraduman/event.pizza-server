@@ -1,0 +1,17 @@
+{
+  "name": "event.pizza-server",
+  "version": "1.0.0",
+  "description": "event.pizza backend",
+  "main": "index.js",
+  "author": "Eralp Karaduman",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "meetup-api": "^1.4.37"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
