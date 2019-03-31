@@ -8,12 +8,12 @@ export const foodEvents = functions.https.onRequest(async (request, response) =>
   const lat: String = request.query.lat
   const lon: String = request.query.lon
   if (!lat || !lon) {
-    response.status(400).json({error: 'Missing parameter: lat or lon'})
-  }
-  try {
-    const events = await getFoodEvents(lat, lon)
-    response.json(events)
-  } catch(e) {
-    response.status(500).json({error: e})
+    response.status(400).json({error: 'Missing parameters: lat or lon'})
+  } else {
+    try {
+      response.json(await getFoodEvents(lat, lon))
+    } catch(e) {
+      response.status(500).json({error: e})
+    }
   }
 });
