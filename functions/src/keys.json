@@ -1,5 +1,17 @@
 {
   "meetup": {
-    "apiKey": "PUT_API_KEY_HERE"
+    "apiKey": "DEDUCTED",
+    "oauth": {
+      "key": "DEDUCTED",
+      "secret": "DEDUCTED",
+      "redirectUri": "http://localhost:5000/eventdotpizza/us-central1/api/meetup/authorize/redirect"
+    }
+  },
+  "platforms": {
+    "oauth": {
+      "redirectUri": {
+        "web": "https://pizza.online/auth/token"
+      }
+    }
   }
 }
