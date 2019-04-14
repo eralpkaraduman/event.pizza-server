@@ -4,7 +4,7 @@
     "oauth": {
       "key": "DEDUCTED",
       "secret": "DEDUCTED",
-      "redirectUri": "http://localhost:5000/eventdotpizza/us-central1/api/meetup/authorize/redirect"
+      "redirectUri": "https://us-central1-eventdotpizza.cloudfunctions.net/api/meetup/authorize/redirect"
     }
   },
   "platforms": {

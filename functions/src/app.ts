@@ -13,12 +13,13 @@ app.use('/meetup', meetupRouter)
 // Error handler
 app.use((error: HttpError, request: Request, response: Response, next: NextFunction) => {
   if (response.headersSent) {
-    return next(error)
+    next(error)
+  } else {
+    const status = error.code || 500;
+    const message = error.message || 'Something went wrong';
+    const type = error.name || 'Error';
+    response.status(status).json({status, message, type})
   }
-  const status = error.code || 500;
-  const message = error.message || 'Something went wrong';
-  const type = error.name || 'Error';
-  response.status(status).json({status, message, type})
 })
 
 
