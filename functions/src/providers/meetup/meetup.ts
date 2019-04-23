@@ -1,6 +1,8 @@
 import fetch from 'node-fetch'
 import keys from '../../keys.json'
 import {POEvent} from '../../events/events'
+import jsdom from 'jsdom'
+const { JSDOM } = jsdom;
 
 export const createAuthorizationUrl = (state: string) => 'https://secure.meetup.com/oauth2/authorize' +
 `?client_id=${keys.meetup.oauth.key}` +
@@ -47,6 +49,6 @@ export const getEvents = async (accessToken: string, lat: string, lon: string): 
     lon: event.venue && event.venue.lon,
     venueName: event.venue && event.venue.name,
     link: event.link,
-    description: event.description
+    description: JSDOM.fragment(event.description || '').textContent as string 
   }))
 }
