@@ -1,5 +1,4 @@
-# event.pizza
-🍕📅
+# event.pizza 🍕📅
 
 ## Install
 `npm install -g firebase-tools`  
