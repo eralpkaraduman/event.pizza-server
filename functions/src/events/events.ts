@@ -2,7 +2,8 @@ const dictionary = [
   'pizza', 'pizzas',
   'snack', 'snacks',
   'beer', 'beers',
-  'meal', 'food'
+  'meal', 'food',
+  '🍔', '🍕', '🌭', '🌮'
 ]
 const regExpWordList = dictionary.reduce((list, word, index) =>
   `${list}${index ? '|' : ''}${word}`, '(') + ')'
