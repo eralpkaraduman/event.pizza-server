@@ -1,4 +1,3 @@
-import _ from "lodash";
 const foods = [
   "pizza",
   "pizzas",
@@ -55,11 +54,11 @@ export const containsWordInDictionary = (
   textString: string
 ): null | { [id: string]: boolean } => {
   const matches = matchers.reduce(
-    (matches, { id, matcher }) =>
-      matcher(textString) ? { ...matches, [id]: true } : matches,
+    (acc, { id, matcher }) =>
+      matcher(textString) ? { ...acc, [id]: true } : acc,
     {}
   );
-  return _.isEmpty(matches) ? false : matches;
+  return Object.keys(matches).length ? matches : null;
 };
 
 export interface POEvent {
