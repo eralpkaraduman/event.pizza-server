@@ -1,8 +1,7 @@
 import fetch from "node-fetch";
 import keys from "../../keys.json";
 import { POEvent } from "../../events/events";
-import jsdom from "jsdom";
-const { JSDOM } = jsdom;
+import h2p from "html2plaintext";
 
 export const createAuthorizationUrl = (state: string) =>
   "https://secure.meetup.com/oauth2/authorize" +
@@ -58,7 +57,7 @@ export const getEvents = async (
       lon: event.venue && event.venue.lon,
       venueName: event.venue && event.venue.name,
       link: event.link,
-      description: JSDOM.fragment(event.description || "").textContent as string
+      description: h2p(event.description) || ("" as string)
     })
   );
 };
