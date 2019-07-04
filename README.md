@@ -1,30 +1,34 @@
 # event.pizza 🍕📅
 
 ## Install
+
+`nvm use`
 `npm install -g firebase-tools`  
-`(cd functions && npm install)`  
+`npm install`
 
 ## Dev
-`(cd functions && npm run dev)`  
-Open `functions` folder in editor (ts linting works better)  
+
+`nvm use`
+`npm run dev`
 
 ## Deploy
-`npm run deploy`  
+
+`nvm use`
+`npm run deploy`
 
 ## Authentication
+
 - Navigate to: `/meetup/authorize?platform=web`
 - After successful auth you should get a redirect to whatever uri configured to `web` in `src/keys.json`
-- Parse `access_token`from query params
+- Parse `access_token` from query params
 
 ## EP's
-### /events
-Returns events which contain the words dictionary  
-Required params;  
-- `X-MeetupAccessToken` Header  
-- `lat` query param  
-- `lon` query param  
 
-## To-Do
-- [x] Authentication  
-- [x] `/events` EP
-- [ ] Move project to root from `functions` folder  
+### /events
+
+Returns events which contain the words dictionary  
+Required params;
+
+- `X-MeetupAccessToken` Header
+- `lat` query param
+- `lon` query param

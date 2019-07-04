@@ -1,9 +1,9 @@
 {
   "meetup": {
-    "apiKey": "DEDUCTED",
+    "apiKey": "",
     "oauth": {
-      "key": "DEDUCTED",
-      "secret": "DEDUCTED",
+      "key": "",
+      "secret": "",
       "redirectUri": "https://us-central1-eventdotpizza.cloudfunctions.net/api/meetup/authorize/redirect"
     }
   },
