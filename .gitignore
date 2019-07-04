@@ -9,3 +9,5 @@ node_modules/
 lib/
 
 .DS_Store
+
+firebase-debug.log
