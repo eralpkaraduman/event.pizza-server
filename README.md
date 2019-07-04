@@ -1,5 +1,7 @@
 # event.pizza 🍕📅
 
+## Firebase cloud function
+
 ## Install
 
 `nvm use`  
