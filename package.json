@@ -16,7 +16,7 @@
   "main": "lib/index.js",
   "dependencies": {
     "async-middleware": "^1.2.1",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "html2plaintext": "^2.1.2",
     "node-fetch": "^2.3.0",
     "firebase-functions": "^3.0.2",
